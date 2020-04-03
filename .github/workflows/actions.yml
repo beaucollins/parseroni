@@ -33,6 +33,9 @@ jobs:
     - name: Package
       run: npm pack
 
+    - name: move
+      run: mkdir build && mv *.tgz build/
+
     - uses: beaucollins/psalm-annotations-action@v1.1.2
       if: always()
       with:
@@ -47,5 +50,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: parseroni
-        path: parseroni-*.tgz
+        path: build
 
