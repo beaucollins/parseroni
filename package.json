@@ -21,7 +21,7 @@
   "contributors": [
     "Beau Collins <beau@collin.pub> (https://beau.collins.pub)"
   ],
-  "repository": "git@github.com:beaucollins/parseroni",
+  "repository": "https://github.com/beaucollins/parseroni.git",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.5",
