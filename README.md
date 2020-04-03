@@ -5,13 +5,15 @@ Born as an attempt to be a lightweight type-safe runtime JSON parser.
 ```ts
 
 import {
+	ParserType,
 	parseObjectOf,
 	parseArrayOf,
 	parseString,
 	parseExactly,
 	optional,
 	mapParser,
-	success
+	success,
+	isSuccess,
 } from 'parser';
 
 const parseAuthor = parseObjectOf(
