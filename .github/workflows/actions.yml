@@ -1,0 +1,49 @@
+name: CI
+
+on: [push]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get NPM Cache Directory
+      id: npm-cache
+      run: |
+        echo "::set-output name=dir::$(npm config get cache)"
+
+    - uses: actions/cache@v1
+      with:
+        path: ${{ steps.npm-cache.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - run: npm install
+
+    - name: TypeScript
+      run: tsc > tsc.txt
+
+    - name: Test
+      run: npm -s test
+
+    - uses: beaucollins/psalm-annotations-action@v1.1.2
+      if: always()
+      with:
+        report_path: tsc.txt
+        report_name: tsc
+        report_title: TypeScript Static Analysis
+        report_type: typescript
+        src_directory: src
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Archive JS
+      uses: actions/upload-artifact@v1
+      with:
+        name: parseroni
+        path: dist
+
+
