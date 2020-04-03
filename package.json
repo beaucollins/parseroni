@@ -1,7 +1,13 @@
 {
   "name": "parseroni",
   "version": "1.0.0",
-  "description": "",
+  "description": "A type safe runtime Parser for TypeScript",
+  "homepage": "https://github.com/beaucollins/parseroni",
+  "bugs": {
+    "url": "https://github.com/beauucollins/parseroni/issues",
+    "email": "beau@collins.pub"
+  },
+  "license": "GPL OR MIT",
   "main": "lib/parse.js",
   "files": [
     "lib/parse.js",
@@ -11,8 +17,12 @@
     "test": "jest",
     "prepack": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Beau Collins <beau@collin.pub> (https://beau.collins.pub)",
+  "contributors": [
+    "Beau Collins <beau@collin.pub> (https://beau.collins.pub)"
+  ],
+  "repository": "git@github.com:beaucollins/parseroni",
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.5",
     "jest": "^25.2.7",
