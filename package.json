@@ -2,9 +2,14 @@
   "name": "parseroni",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/parse.js",
+  "files": [
+    "lib/parse.js",
+    "lib/parse.d.ts"
+  ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepack": "tsc"
   },
   "author": "",
   "license": "ISC",

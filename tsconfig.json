@@ -1,10 +1,12 @@
 {
     "compilerOptions": {
         "target": "es2015",
+        "declaration": true,
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outDir": "dist",
+        "outDir": "./lib",
+        "strict": true,
         "sourceMap": true,
         "module": "CommonJS",
         "esModuleInterop": true,
@@ -14,7 +16,6 @@
     },
     "include": [
         "src/**/*",
-        "__tests__/**/*"
     ],
     "exclude": [
         "node_modules",

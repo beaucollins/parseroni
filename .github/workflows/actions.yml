@@ -30,6 +30,9 @@ jobs:
     - name: Test
       run: npm -s test
 
+    - name: Package
+      run: npm pack
+
     - uses: beaucollins/psalm-annotations-action@v1.1.2
       if: always()
       with:
@@ -40,10 +43,9 @@ jobs:
         src_directory: src
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Archive JS
+    - name: Archive Package
       uses: actions/upload-artifact@v1
       with:
         name: parseroni
-        path: dist
-
+        path: parseroni-*.tgz
 
