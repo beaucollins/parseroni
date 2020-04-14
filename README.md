@@ -206,7 +206,7 @@ const result = parseStatus('other');
 
 #### `optional`
 
-Given any parser, returns a new parser that succeds when original parser succeeds _or_ the value is `null`.
+Given any parser, returns a new parser that succeeds when original parser succeeds _or_ the value is `null`.
 
 ```ts
 const parse = optional(parseString);
