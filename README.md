@@ -14,7 +14,7 @@ The gist: `Parser<I,O>` is a function that takes a type `I` in as its single arg
 
 `Result<I,O>` is a union of `Success<O>|Failure<I>` which are container types that describe the success and failure branches of the `Parser<I,O>` logic.
 
-This library was designed to be used with values returne from `JSON.parse`.
+This library was designed to be used with values returned from `JSON.parse`.
 
 A basic JSON parser:
 
@@ -28,9 +28,9 @@ const parseJSON: Parser<any,any> = (input) => {
 }
 ```
 
-`Parser<any,any>` is not exactly useful when the goal is type safety. This library provides the building blocks to validate ad return JSON primitives and combinations of them.
+`Parser<any,any>` is not exactly useful when the goal is type safety. This library provides the building blocks to validate and return JSON primitives, and combinators to compose more complex validation.
 
-### Utility functios
+### Utility functions
 
 A set of functions to simplify working with `Result<I,O>` types.
 
@@ -60,7 +60,7 @@ if (isFailure(result)) {
 
 #### `value`
 
-`value` unwraps the boxed value of `Success<T>`. Allows the shape of `Success<T>` to be opaque to the user of this api.
+`value` unwraps the boxed value of `Success<T>`. Allows the shape of `Success<T>` to be opaque to the user of this API.
 
 ```ts
 const result = parseString('maybe a string');
