@@ -1,6 +1,6 @@
 # Parser for TypeScript
 
-A delarative, composable library of JSON compatible value parsers.
+A declarative, composable library of JSON compatible value parsers. Unminimized, uncompressed payload of 4703 bytes.
 
 ## Install
 
