@@ -302,6 +302,7 @@ const author: Author = {
    username: 5, // 💥 Not a string!
 };
 
+// 💥 no `author`
 const post: Post = {
 	title: 'Hello World',
 	status: 'other', // 💥 Not 'published' or 'draft'
