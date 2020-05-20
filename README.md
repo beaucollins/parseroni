@@ -21,7 +21,7 @@ A basic JSON parser:
 ```ts
 const parseJSON: Parser<any,any> = (input) => {
 	try {
-		return success(JSON.parse(input);
+		return success(JSON.parse(input));
 	} catch (error) {
 		return failure(error.message, input);
 	}
